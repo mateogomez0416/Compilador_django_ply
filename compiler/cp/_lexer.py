@@ -147,14 +147,6 @@ def t_error(t):
 
 
 
-def test(data, lexer):
-	lexer.input(data)
-	while True:
-		tok = lexer.token()
-		if not tok:
-			break
-		print (tok)
-
 lexer = lex.lex(optimize=1,lextab="footab")
 
 # Test 
@@ -167,6 +159,6 @@ if __name__ == '__main__':
 
 	
 	lexer.input(data)
-	test(data, lexer)
+
 
 

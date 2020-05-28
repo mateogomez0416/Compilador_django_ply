@@ -12,34 +12,64 @@
   <body class="logged-out env-production page-responsive session-authentication">
        
       <div class="auth-form-header p-0">
-        <h1>Validador de Contraseña en Python</h1>
+        <h1>Lexer y Pasrer en Python</h1>
       </div>
 
       <div class="auth-form-body mt-3">
 
         <div class="auth-form-header p-0">
             <div class="auth-form-header p-0">
-                <h2> Criterios de la contraseña </h2>
-                <p>En el siguiente orden introduzca la contraseña de 10 Caracteres</p>
+                <h2> Resultados de la Compilacion </h2>
             </div>
-           
             
-              
-        </div>
-
+                
         <div id="result" class="auth-form-header p-0"> 
           
+          <div>
+            <label for="">Entrada</label>
+            <textarea class="form-control" rows="20" cols="30" type="text" id="myTextarea"    
+              placeholder="{{textAreaindex}}"
+            ></textarea>
           
-             Contraseña {{esto}}-------
-            {{aca}}          
+          </div>
           
-        </div>
+          <div>
+            <label for="">Analisis de token</label>     
+            <textarea class="form-control" rows="20" cols="30" type="text" id="myTextarea2"   
+              placeholder="{{tokere}}"></textarea>
+            
+          </div>
+
+          
+        <div>
+          <label for="">Analisis de sintaxis</label>
+          <textarea class="form-control" rows="20" cols="20" type="text" id="myTextarea3"   
+          placeholder="{{resulparser}}"></textarea>
         
+        </div>
+
+          {{Error}}           
+            
+        </div>
+ 
+        </div>   
+               
         <div> <h1> <a href="{% url 'index' %}">Regresar</a></h1>    </div>
 
         
       </div>
-    
-
+           
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+      crossorigin="anonymous"></script>
+  
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+      crossorigin="anonymous"></script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+      crossorigin="anonymous"></script>
+      
   </body>
 </html>

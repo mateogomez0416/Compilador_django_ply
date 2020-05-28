@@ -3,79 +3,112 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-  <link crossorigin="anonymous" media="all" integrity="sha512-FG+rXqMOivrAjdEQE7tO4BwM1poGmg70hJFTlNSxjX87grtrZ6UnPR8NkzwUHlQEGviu9XuRYeO8zH9YwvZhdg==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-146fab5ea30e8afac08dd11013bb4ee0.css" />
-  <link crossorigin="anonymous" media="all" integrity="sha512-iXrV/b4ypc1nr10b3Giikqff+qAx5osQ0yJRxHRDd8mKFefdMtEZ0Sxs1QysJxuJBayOKThjsuMjynwBJQq0aw==" rel="stylesheet" href="https://github.githubassets.com/assets/site-897ad5fdbe32a5cd67af5d1bdc68a292.css" />
-  <link crossorigin="anonymous" media="all" integrity="sha512-bdcUCE1osw1cEGLs662y4ulJx7ISeuLws/QBd3xlTAAQfjeO8A7quUiUAk0DWu9oVNW+g3GQ0dL+iAtAOaIntQ==" rel="stylesheet" href="https://github.githubassets.com/assets/github-6dd714084d68b30d5c1062ecebadb2e2.css" />
-  <style>
-    ol {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333333;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: #111111;
-    }
-    </style>
-
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+  crossorigin="anonymous">
+  
 </head>
 
   <body class="logged-out env-production page-responsive session-authentication">
     
-    
     <form action="/resultado" accept-charset="UTF-8" method="GET">    
     
-      <div class="auth-form-header p-0">
-        <h1>Validador de Contraseña en Python</h1>
+      <div class="auth-form-header p-0" >
+        <center><h2>Creacion de un lenguaje de programacion hecho en ply y yacc con Python Compiladores</h2></center>
+      </div>
+      
+      
+      <div >
+        
+          <p>Presione en Documentación para saber sobre el lenguaje</p>
+          <a class="btn btn-info" href="{% url 'documentación' %}">Documentación</a>
+          <a class="btn btn-success" onclick="myFunction()" >Ejemplos: Ciclos y asignaciones</a>
+          <button class="btn btn-success" style="position: absolute; left:500px" >Run</button>
+                 
       </div>
 
-      <div class="auth-form-body mt-3">
-
-        <div class="auth-form-header p-0">
-            <div class="auth-form-header p-0">
-                <h2> Criterios de la contraseña </h2>
-                <p>En el siguiente orden introduzca la contraseña  de 10 caracteres</p>
-            </div>
-           
+        <div>
+          
+              <p>Escriba el código en este cuado y presione el botón "Run" para compilarlo.</p>
+          
+        </div>
+    
+        <div >
+        
             
-            <ol >
-                <li><a >1.) 1era letra en mayuscula</a></li>
-                <li><a >2.) 3 Numeros</a></li>
-                <li><a >3.) 3  minusculas</a></li>
-                <li><a >4.) 3 Caracteres especiales</a></li>
-            </ol>
+              <textarea class="form-control" rows="10" type="text" id="password" name= "pas"  required class="form-control form-control" 
+              placeholder= "
+  E varA;
+  E varB;
               
-
+  E m()
+  {
+  varA=3;
+  varB=4;
+    SI(varA)
+        {
+        SI((varB<A)&(varA%2==varB))
+          {
+                    
+                      
+          }
+        }  
+  }
+              "></textarea>
+            
+          
         </div>
 
-        <label for="login_field">
-          Username 
-        </label>
-         
-
-        <label for="password" >
-          Password 
-        </label>
-
-        <input type="text" id="password" name= "pas"  required class="form-control form-control input-block" />
-        <input type="submit"   class="btn btn-primary btn-block"  />
-      </div>
+      </div>   
     </form>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+    crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+      function myFunction() {
+        
+              var datos = 'E numero;'+'\n'+
+'F promedio;'+'\n'+
+'S cadena;'+'\n'+
+'E m()'+'\n'+
+'{'+'\n'+
+' '+'a=3;'+'\n'+
+'  '+'SI(A)'+'\n'+
+'  {'+'\n'+
+'    SI((B<w)&(q%2==0))'+'\n'+
+'    {'+'\n'+
+'      H{'+'\n'+
+'        for(i=0;i<4;i++)'+'\n'+
+'        {'+'\n'+
+'          MQ(promedio<10)'+'\n'+
+'          {'+'\n'+
+'          '+'\n'+
+'          }'+'\n'+
+'        }'+'\n'+
+'      }MQ(s);'+'\n'+
+'    }'+'\n'+
+'  } '+'\n'+
+'}'
+
+              document.getElementById("password").value = datos;  
+              document.getElementById("password").innerHTML = datos; 
+      }
+
+
+      
+
+    </script>
+    
   </body>
 </html>
